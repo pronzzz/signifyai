@@ -1,12 +1,16 @@
 # SignifyAI - Hand Gesture Recognition System
 
+
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ed)
 ![License](https://img.shields.io/badge/License-MIT-green)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 
-A production-ready, real-time hand gesture recognition system leveraging Deep Learning (VGG-16 Transfer Learning) and Computer Vision. Designed for performance, scalability, and ease of deployment.
+A production-ready, real-time hand gesture recognition system leveraging Deep Learning (VGG-16 Transfer Learning) and Computer Vision. 
+**Current Status**: Trained on Synthetic Data (Proof of Concept).
+
 
 ## 🌟 Key Features
 - **Real-Time Inference**: low-latency gesture detection via webcam using OpenCV.
@@ -63,6 +67,7 @@ Train the VGG-16 model with transfer learning:
 python src/model/train.py
 ```
 *Metrics are saved to `checkpoints/history.json`.*
+*Note: Due to missing Kaggle credentials, the current model was trained on **synthetic data** (random noise with text labels). Accuracy metrics reflect this synthetic nature.*
 
 ### 4. Visualization & Analysis
 Generate performance graphs (Loss, Accuracy) and dataset insights:
@@ -70,6 +75,14 @@ Generate performance graphs (Loss, Accuracy) and dataset insights:
 python src/visualization/visualize.py
 ```
 Outputs are saved to `reports/figures/`.
+
+#### Performance Plots
+| Training Loss | Training Accuracy |
+|:---:|:---:|
+| ![Loss](reports/figures/training_loss.png) | ![Accuracy](reports/figures/training_accuracy.png) |
+
+#### Data Distribution
+![Class Distribution](reports/figures/class_distribution.png)
 
 ### 5. Run the Application
 Start the local web server:
